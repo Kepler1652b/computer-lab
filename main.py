@@ -6,11 +6,23 @@ def is_prime(n):
             return False
     return True
 
-count = 0
-number = 2
 
-while count < 100:
-    if is_prime(number):
-        print(number)
-        count += 1
-    number += 1
+def biggest_number(list_of_numbers):
+    biggest = list_of_numbers[0]
+    for number in list_of_numbers:
+        if number>biggest:
+            biggest=number
+    return biggest
+
+def main():
+    count = 0
+    number = 2
+
+    while count < 100:
+        if is_prime(number):
+            print(number)
+            count += 1
+        number += 1
+
+
+
