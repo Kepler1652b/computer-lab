@@ -31,7 +31,7 @@ def blind_date(list_of_boys:list,list_of_girls:list):
         girl = list_of_girls[girl_random_index]
         list_of_girls.pop(girl_random_index)
         
-        bd = (boy,girl,start_time.date())
+        bd = (boy,girl,f'{start_time.month}/{start_time.day} 20:00 PM')
         offset += 5
         print(bd)
 
