@@ -20,8 +20,9 @@ def biggest_number(list_of_numbers):
 
 def blind_date(list_of_boys:list,list_of_girls:list):
     offset = 5
-    start_time = datetime.now() + timedelta(offset)
+    
     while list_of_boys:
+        start_time = datetime.now() + timedelta(offset)
         boy_random_index = random.randint(0,len(list_of_boys)-1)
         boy = list_of_boys[boy_random_index]
         list_of_boys.pop(boy_random_index)
@@ -31,6 +32,7 @@ def blind_date(list_of_boys:list,list_of_girls:list):
         list_of_girls.pop(girl_random_index)
         
         bd = (boy,girl,start_time.date())
+        offset += 5
         print(bd)
 
 
@@ -49,8 +51,8 @@ def main():
     #         print(number)
     #         count += 1
     #     number += 1
-    boys = ["amir",'sam','shahram']
-    girls = ['mina','mobina','fatemeh','z']
+    boys = ["amir",'sam','shahram','kj']
+    girls = ['mina','mobina','fatemeh','z','x','y','f']
     blind_date(boys,girls)
 
 
